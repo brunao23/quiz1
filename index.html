@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeuQuiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SeuQuiz</h1>
+        <div id="loginForm" class="form">
+            <h2>Login</h2>
+            <input type="text" id="loginUsername" placeholder="Nome de usuário">
+            <input type="password" id="loginPassword" placeholder="Senha">
+            <button onclick="login()">Entrar</button>
+            <p>Não tem uma conta? <a href="#" onclick="showRegisterForm()">Cadastre-se</a></p>
+        </div>
+        <div id="registerForm" class="form" style="display: none;">
+            <h2>Cadastro</h2>
+            <input type="text" id="registerUsername" placeholder="Nome de usuário">
+            <input type="password" id="registerPassword" placeholder="Senha">
+            <button onclick="register()">Cadastrar</button>
+            <p>Já tem uma conta? <a href="#" onclick="showLoginForm()">Faça login</a></p>
+        </div>
+        <div id="quizContainer" class="quiz-container" style="display: none;">
+            <div id="score-display" class="score-display">Pontuação Total: 0</div>
+            <div id="chat" class="chat-box"></div>
+            <div id="options" class="options-area"></div>
+            <div id="trophy-animation" class="trophy-animation">🏆</div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
